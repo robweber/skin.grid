@@ -20,8 +20,9 @@
 				<include>transition_Background</include>
 
 				<!-- Background Slideshow -->
-				<control type="multiimage" id="$PARAM[id]">
-					<imagepath background="true">$VAR[background:Home]</imagepath>
+				<control type="image" id="$PARAM[id]">
+					<texture background="true">$VAR[background:Home]</texture>
+					<fadetime>3000</fadetime>
 					<visible>!String.IsEqual(Skin.String(background.home),none) + !String.IsEqual(Skin.String(homemenu.layout),compact) + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
 				</control>
 
