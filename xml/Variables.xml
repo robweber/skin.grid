@@ -1027,8 +1027,8 @@
 		<value condition="[Skin.HasSetting(SkinHelper.EnableAnimatedPosters) + !String.IsEmpty(ListItem.Art(animatedposter))] + [!Skin.HasSetting(art.animated.info) | Skin.HasSetting(art.animated.info) + Window.IsActive(movieinformation)]">$INFO[ListItem.Art(animatedposter)]</value>
 		<!-- Get the parent tv show poster from the first season and set it on the all seasons node -->
 		<value condition="Container.Content(seasons) + String.IsEqual(ListItem.Label,$LOCALIZE[20366])">$INFO[Container().ListItem(1).Art(tvshow.poster)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
-		<value condition="!String.IsEmpty(Container.Art(season.poster))">$INFO[Container.Art(season.poster)]</value>
+		<value condition="!String.IsEmpty(Container.ListItem.Art(season.poster))">$INFO[Container.ListItem.Art(season.poster)]</value>
+		<value condition="!String.IsEmpty(Container.ListItem.Art(poster))">$INFO[Container.ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value>$INFO[ListItem.Art(thumb)]</value>
